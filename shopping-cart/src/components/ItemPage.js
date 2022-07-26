@@ -1,6 +1,6 @@
 const ItemPage = () => {
   return (
-    <div>
+    <div id='itemPage' className='pageContent'>
       <h1>ItemPage</h1>
     </div>
   );

@@ -1,6 +1,6 @@
 const ShopPage = () => {
   return (
-    <div>
+    <div id='shopPage' className='pageContent'>
       <h1>ShopPage</h1>
     </div>
   );

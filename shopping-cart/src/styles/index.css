@@ -1,0 +1,47 @@
+:root {
+  --navBarHeight: 8vh;
+  --paddingLeft: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: 1fr;
+  min-height: 100vh;
+}
+
+#navBar {
+  background-color: black;
+  color: white;
+  padding-left: var(--paddingLeft);
+  position: fixed;
+  height: var(--navBarHeight);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 2rem;
+}
+
+#navBarWrapper {
+  width: 30%;
+  height: var(--navBarHeight);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pageContent {
+  margin-top: var(--navBarHeight);
+  padding-left: var(--paddingLeft);
+}
+
+.navBarLink {
+  color: white;
+  text-decoration: none;
+}
