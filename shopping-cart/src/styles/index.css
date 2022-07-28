@@ -27,9 +27,7 @@ body {
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   white-space: nowrap;
-  font-size: 2rem;
 }
 
 #navBarWrapper {
@@ -40,6 +38,12 @@ body {
   justify-content: center;
 }
 
+#iconWrapper {
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+}
+
 .pageContent {
   margin-top: var(--navBarHeight);
   padding-left: var(--paddingLeft);
@@ -48,8 +52,10 @@ body {
 #title {
   color: var(--blue);
   background-color: var(--yellow);
-  border: solid 5px var(--blue);
   font-weight: bold;
+  border-radius: 50%;
+  font-size: 2rem;
+  padding: 10px;
 }
 
 .navBarLink {
@@ -58,6 +64,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2vw;
   height: 100%;
 }
 
