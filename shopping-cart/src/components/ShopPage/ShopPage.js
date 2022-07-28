@@ -1,7 +1,7 @@
 const ShopPage = () => {
   return (
     <div id='shopPage' className='pageContent'>
-      <h1>ShopPage</h1>
+      <h1>Shop Page</h1>
     </div>
   );
 };
