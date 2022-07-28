@@ -1,17 +1,21 @@
-/* NavBar, HomePage, NotFoundPage, and CSS classes */
-
 :root {
   --navBarHeight: 8vh;
   --paddingLeft: 10px;
   --yellow: #fbd914;
   --blue: #0058ab;
   --btnHeight: 40px;
+  --itemMinWidth: 300px;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 #app {
@@ -23,4 +27,11 @@ body {
 .pageContent {
   margin-top: var(--navBarHeight);
   padding-left: var(--paddingLeft);
+}
+
+.line {
+  width: calc(100vw - 2* var(--paddingLeft));
+  height: 2px;
+  background-color: gray;
+  margin: 10px 0 10px 0;
 }

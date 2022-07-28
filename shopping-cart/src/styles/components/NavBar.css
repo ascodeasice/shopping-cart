@@ -1,13 +1,14 @@
 #navBar {
   background-color: black;
   color: white;
-  padding-left: var(--paddingLeft);
   position: fixed;
   height: var(--navBarHeight);
   width: 100vw;
   display: flex;
   justify-content: space-between;
   white-space: nowrap;
+  box-shadow: 0 0 10px black;
+  padding-left: 10px;
 }
 
 #navBarWrapper {
