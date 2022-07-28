@@ -15,7 +15,7 @@ describe('NavBar component', () => {
     const icon = screen.getByText('EE-KAY-UH');
     const homeLink = screen.getByRole('link', { name: 'Home' });
     const shopLink = screen.getByRole('link', { name: 'Store' });
-    const cartLink = screen.getByRole('link', { name: 'Cart' });
+    const cartLink = screen.getByRole('link', { name: 'Cart(0)' });
 
     expect(icon).toBeInTheDocument();
     expect(homeLink).toBeInTheDocument();
@@ -32,7 +32,7 @@ describe('NavBar component', () => {
 
     const homeLink = screen.getByRole('link', { name: 'Home' });
     const shopLink = screen.getByRole('link', { name: 'Store' });
-    const cartLink = screen.getByRole('link', { name: 'Cart' });
+    const cartLink = screen.getByRole('link', { name: 'Cart(0)' });
 
     userEvent.click(shopLink);
     expect(screen.getByRole('heading', { name: 'Store' })).toBeInTheDocument();

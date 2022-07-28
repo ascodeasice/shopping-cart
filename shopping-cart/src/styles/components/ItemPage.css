@@ -17,7 +17,7 @@
 
 #inputContainer {
   display: grid;
-  grid-template-columns: min-content min-content;
+  grid-template-columns: repeat(3, min-content);
   column-gap: 20px;
   align-items: center;
 }
@@ -30,7 +30,6 @@
 
 #purchaseInput {
   width: 10vw;
-  height: 2vw;
   font-size: 2vw;
   outline: none;
 }
@@ -41,4 +40,16 @@
 
 #purchaseInput:invalid {
   border: solid 2px red;
+}
+
+#purchaseBtn {
+  white-space: nowrap;
+  font-size: 2vw;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+}
+
+#purchaseBtn:hover {
+  color: var(--blue);
 }

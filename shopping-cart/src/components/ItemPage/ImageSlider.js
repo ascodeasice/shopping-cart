@@ -1,7 +1,7 @@
 import Dot from '../../assets/dot.svg';
 import Arrow from '../../assets/left-arrow.svg';
 import '../../styles/components/ImageSlider.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const ImageSlider = ({ srcList }) => {
   const imageCount = srcList.length;

@@ -20,20 +20,19 @@ const InfoContainer = ({ product, products, setProducts, cart, setCart }) => {
       });
       setCart(newCart);
     } else {
-      product.numLeft -= purchaseNum;
       setCart(cart.concat({
         id: product.id,
         name: product.name,
         description: product.description,
         num: purchaseNum,
         price: product.price
-      }))
+      }));
     }
 
     // remove purchased item from stock
     const newProducts = structuredClone(products);
     newProducts.forEach(item => {
-      if (item.id === products.id) {
+      if (item.id === product.id) {
         item.numLeft -= purchaseNum;
       }
     });
@@ -48,11 +47,11 @@ const InfoContainer = ({ product, products, setProducts, cart, setCart }) => {
         <label id='purchaseLabel' htmlFor='purchaseInput' className=''>Number</label>
         <input id='purchaseInput' value={purchaseNum} min={0} max={product.numLeft} type='number'
           onChange={handleChange} />
-        <button onClick={addToCart}>Add to cart</button>
+        <button id='purchaseBtn' className='slide_from_left' onClick={addToCart}>Add to cart</button>
       </div>
       <h2 className='infoTitle'>Info</h2>
       <div className='shortLine'></div>
-      <p className='itemDescription'> Price: ${product.price}{'\n'} Number: {product.numLeft} Left</p>
+      <p className='itemDescription'> Price: ${product.price}{'\n'} {product.numLeft} Left</p>
       <h2 className='infoTitle'>Description</h2>
       <div className='shortLine'></div>
       <p className='itemDescription'>{product.description}</p>

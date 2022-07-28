@@ -1,8 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { MemoryRouter, BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom'; // For toBeInTheDocument()
-import App from '../App';
 import ShopPage from '../components/ShopPage/ShopPage';
 import ItemCard from '../components/ShopPage/ItemCard';
 
@@ -10,13 +8,13 @@ let products = [];
 
 beforeEach(() => {
   products = [{
-    id: 1111,
+    id: '1111',
     name: 'mock1',
     numLeft: 0,
     imgSrc: ['#', '#']
   },
   {
-    id: 2222,
+    id: '2222',
     name: 'mock2',
     numLeft: 1,
     imgSrc: ['#', '#']
@@ -44,14 +42,13 @@ describe('Links of itemCard', () => {
   it('Click links take you to ItemPage', () => {
     render(
       <BrowserRouter>
-        {products.map(product =>
-          <ItemCard product={product} />
+        {products.map((product, i) =>
+          <ItemCard key={i} product={product} />
         )}
       </BrowserRouter>
     );
     products.forEach((product) => {
-      expect(screen.getByText(product.name).closest('a')).toHaveAttribute('href', `/${product.numLeft === 0 ? '' : product.id}`);
+      expect(screen.getByText(product.name).closest('a')).toHaveAttribute('href', `/${product.id}`);
     });
-
   });
-})
+});

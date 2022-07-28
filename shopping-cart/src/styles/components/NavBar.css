@@ -15,7 +15,7 @@
 }
 
 #navBarWrapper {
-  width: 30%;
+  width: 40%;
   height: var(--navBarHeight);
   display: grid;
   grid-template-columns: repeat(3, 1fr);

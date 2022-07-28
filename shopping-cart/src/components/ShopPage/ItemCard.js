@@ -11,7 +11,7 @@ const ItemCard = ({ product }) => {
 
   return (
     <div className={`itemCard ${(product.numLeft === 0 ? 'outOfStock' : '')}`}>
-      <Link to={`/${product.numLeft === 0 ? 'store' : product.id}`}>
+      <Link to={`/${product.id}`}>
         <img className="itemImg" src={product.imgSrc[0]} alt={product.name}
           onMouseOver={hoverImg} onMouseLeave={leaveImg} />
         <h1 className="productName">{product.name} </h1>
