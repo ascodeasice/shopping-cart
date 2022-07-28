@@ -5,7 +5,7 @@ const ShopPage = ({ products }) => {
 
   return (
     <div id='shopPage' className='pageContent'>
-      <h1 id='shopHeading'>Store</h1>
+      <h1 className='heading'>Store</h1>
       <div className='line'></div>
       <div id="itemContainer">
         {

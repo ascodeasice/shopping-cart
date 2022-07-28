@@ -24,6 +24,12 @@ a {
   min-height: 100vh;
 }
 
+.heading {
+  font-size: 8vh;
+  padding-left: var(--paddingLeft);
+  margin: 0;
+}
+
 .pageContent {
   margin-top: var(--navBarHeight);
   padding-left: var(--paddingLeft);
@@ -33,5 +39,12 @@ a {
   width: calc(100vw - 2* var(--paddingLeft));
   height: 2px;
   background-color: gray;
-  margin: 10px 0 10px 0;
+  margin: 20px 0 20px 0;
+}
+
+.shortLine {
+  width: calc(50vw - 2* var(--paddingLeft));
+  height: 2px;
+  background-color: gray;
+  margin: 20px 0 20px 0;
 }

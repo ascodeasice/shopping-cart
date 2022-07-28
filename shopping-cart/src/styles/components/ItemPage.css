@@ -1,0 +1,44 @@
+#infoContainer {
+  display: grid;
+  grid-template-columns: var(--imageWidth);
+  justify-content: center;
+}
+
+.infoTitle {
+  margin-bottom: 0;
+  font-size: 3vw;
+}
+
+.itemDescription {
+  margin-top: 0;
+  font-size: 2vw;
+  white-space: pre-line;
+}
+
+#inputContainer {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  column-gap: 20px;
+  align-items: center;
+}
+
+#purchaseLabel {
+  font-size: 2vw;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#purchaseInput {
+  width: 10vw;
+  height: 2vw;
+  font-size: 2vw;
+  outline: none;
+}
+
+#purchaseInput:focus {
+  border: 2px solid black;
+}
+
+#purchaseInput:invalid {
+  border: solid 2px red;
+}

@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 
 import HomePage from './components/HomePage';
-import ItemPage from './components/ItemPage';
+import ItemPage from './components/ItemPage/ItemPage';
 import ShopPage from './components/ShopPage/ShopPage';
 import NavBar from './components/Navbar';
 import NotFoundPage from './components/NotFoundPage';
@@ -39,8 +39,19 @@ const App = () => {
     {
       id: '1',
       name: 'HUVUDROLL',
-      description: `12 in a pack, made out of people who couldn\'t find the exit(not really),
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia.`,
+      description: `Try our delicious HUVUDROLL chicken meatballs - gently seasoned to preserve the natural, juicy chicken flavour. And choosing them helps you reduce your climate footprint by eating less red meat.
+
+      Serve the chicken meatballs as classic Swedish meatballs with mashed potatoes, cream sauce and lingonberry jam - or try them with pasta, vegetables or dishes inspired by Asian cuisine.
+      
+      Chicken meatballs should taste like chicken. That's why we've seasoned the chicken meat gently, allowing its natural, juicy flavour to stand out. Still, its taste is not unlike the beef and pork meatball.
+      
+      By eating white meat instead of red meat you reduce your climate footprint.
+      
+      Easily prepared from frozen in minutes. In the oven, in the microwave or on the stove.
+      
+      Easily portioned. Prepare the amount needed, leave the rest in the freezer.
+      
+      Just as tasty warm as they are cold, e.g. halved as a sandwich topping.`,
       price: 5,
       numLeft: 20,
       imgSrc: [Meatball1, Meatball2, Meatball3, Meatball4, Meatball5]
@@ -62,17 +73,19 @@ const App = () => {
       imgSrc: [Shelf1, Shelf2, Shelf3, Shelf4]
     }
   ]);
-  const [cart, setCarts] = useState([]);
+  const [cart, setCart] = useState([]);
+
 
   return (
     <div id='app'>
-      <NavBar />
+      <NavBar cart={cart} />
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/store' element={<ShopPage products={products} />} />
         <Route path='/cart' element={<CartPage />} />
+        <Route path='/*' element={<ItemPage cart={cart} setCart={setCart}
+          products={products} setProducts={setProducts} />} />
         <Route path='/*' element={<NotFoundPage />} />
-        <Route path='/id' element={<ItemPage />} /> {/* TODO change path to id of item with map*/}
       </Routes>
     </div>
   );

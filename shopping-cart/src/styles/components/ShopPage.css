@@ -3,12 +3,6 @@
   grid-template-rows: min-content min-content;
 }
 
-#shopHeading {
-  font-size: 4rem;
-  padding-left: var(--paddingLeft);
-  margin: 0;
-}
-
 #itemContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--itemMinWidth), 1fr));
