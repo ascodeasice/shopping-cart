@@ -1,3 +1,5 @@
+/* NavBar, HomePage, NotFoundPage, and CSS classes */
+
 :root {
   --navBarHeight: 8vh;
   --paddingLeft: 10px;
@@ -18,93 +20,7 @@ body {
   min-height: 100vh;
 }
 
-#navBar {
-  background-color: black;
-  color: white;
-  padding-left: var(--paddingLeft);
-  position: fixed;
-  height: var(--navBarHeight);
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  white-space: nowrap;
-}
-
-#navBarWrapper {
-  width: 30%;
-  height: var(--navBarHeight);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-}
-
-#iconWrapper {
-  background-color: var(--blue);
-  display: flex;
-  align-items: center;
-}
-
 .pageContent {
   margin-top: var(--navBarHeight);
   padding-left: var(--paddingLeft);
-}
-
-#title {
-  color: var(--blue);
-  background-color: var(--yellow);
-  font-weight: bold;
-  border-radius: 50%;
-  font-size: 2rem;
-  padding: 10px;
-}
-
-.navBarLink {
-  color: white;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2vw;
-  height: 100%;
-}
-
-.navBarLink:hover {
-  color: black;
-  background-color: white;
-}
-
-#homePage {
-  background-image: url('../assets/bg.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-
-  display: grid;
-  grid-template-rows: repeat(2, min-content);
-  grid-template-columns: min-content;
-  white-space: nowrap;
-}
-
-#slogan {
-  font-size: 2.5rem;
-  font-style: oblique;
-  background-color: white;
-  padding: 5px;
-}
-
-#shopBtn {
-  width: calc(var(--btnHeight)*3);
-  height: var(--btnHeight);
-
-  border: none;
-  background-color: black;
-  color: white;
-  font-size: 1rem;
-}
-
-#shopBtnLink {
-  justify-self: center;
-}
-
-#shopBtn:hover {
-  color: black;
 }

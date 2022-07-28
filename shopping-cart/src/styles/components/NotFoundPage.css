@@ -1,0 +1,18 @@
+#notFoundPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(235, 235, 235);
+}
+
+#notFoundText {
+  font-size: 6rem;
+  text-align: center;
+}
+
+#text404 {
+  font-size: 8rem;
+  margin: 0;
+  text-align: center;
+}

@@ -29,7 +29,8 @@ describe('HomePage Component', () => {
 
     expect(heading).toBeInTheDocument();
     expect(button).toBeInTheDocument();
-  })
+  });
+
   it('click Shop Now button go to shop page', () => {
     render(
       <MemoryRouter>

@@ -1,0 +1,35 @@
+#homePage {
+  background-image: url('../../assets/bg.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: min-content;
+  white-space: nowrap;
+}
+
+#slogan {
+  font-size: 2.5rem;
+  font-style: oblique;
+  background-color: white;
+  padding: 5px;
+}
+
+#shopBtn {
+  width: calc(var(--btnHeight)*3);
+  height: var(--btnHeight);
+
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+}
+
+#shopBtnLink {
+  justify-self: center;
+}
+
+#shopBtn:hover {
+  color: black;
+}
