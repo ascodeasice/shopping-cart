@@ -1,9 +1,22 @@
 import React from "react";
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { MemoryRouter } from 'react-router-dom';
+import { Link, MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom'
 import App from '../App';
+
+describe('Bad routing', () => {
+  render(
+    <MemoryRouter>
+      <App />
+      <Link to='/bad-routing' data-testid='badLink'>Bad Link</Link>
+    </MemoryRouter>
+  );
+
+  userEvent.click(screen.getByTestId('badLink'));
+
+  expect(screen.getByText('Item not found')).toBeInTheDocument();
+})
 
 describe('HomePage Component', () => {
   it('render text and button', () => {
@@ -11,10 +24,10 @@ describe('HomePage Component', () => {
       <MemoryRouter>
         <App />
       </MemoryRouter>);
-    const heading = screen.getByRole('heading');
+    const heading = screen.getByRole('heading', { name: '"No, you pronounced it wrong!"' });
     const button = screen.getByRole('button', { name: 'Shop Now' });
 
-    expect(heading.textContent).toBe('"No, you pronounced it wrong!"');
+    expect(heading).toBeInTheDocument();
     expect(button).toBeInTheDocument();
   })
   it('click Shop Now button go to shop page', () => {
