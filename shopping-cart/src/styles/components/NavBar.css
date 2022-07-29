@@ -8,14 +8,14 @@
   justify-content: space-between;
   padding-left: 10px;
 
-  width: 100vw;
+  min-width: 100vw;
   height: var(--navBarHeight);
   white-space: nowrap;
   z-index: 1;
 }
 
 #navBarWrapper {
-  width: 40%;
+  width: min(600px, 50vw);
   height: var(--navBarHeight);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -33,7 +33,7 @@
   background-color: var(--yellow);
   font-weight: bold;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 2vw;
   padding: 10px;
 }
 
@@ -50,4 +50,16 @@
 .navBarLink:hover {
   color: black;
   background-color: white;
+}
+
+.navBarLink:hover #cartIcon {
+  filter: none;
+}
+
+#cartIcon {
+  width: 3vw;
+  height: 3vw;
+  filter: invert(100%);
+  margin-right: 5px;
+  /* white */
 }

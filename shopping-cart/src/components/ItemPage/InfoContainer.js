@@ -7,7 +7,7 @@ const InfoContainer = ({ product, products, setProducts, cart, setCart }) => {
   }
 
   const addToCart = () => {
-    if (product.numLeft < purchaseNum) {
+    if (product.numLeft < purchaseNum || purchaseNum <= 0) {
       return;
     }
     // already have product in cart

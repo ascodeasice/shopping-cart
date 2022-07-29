@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import '../styles/components/NavBar.css';
+import Cart from '../assets/cart.svg';
 
 const NavBar = ({ cart }) => {
   return (
@@ -10,7 +11,10 @@ const NavBar = ({ cart }) => {
       <div id='navBarWrapper'>
         <Link className="navBarLink" to='/'>Home</Link>
         <Link className="navBarLink" to='/store'>Store</Link>
-        <Link className="navBarLink" to='/cart'>Cart({cart.reduce((sum, item) => sum + item.num, 0)})</Link>
+        <Link className="navBarLink" to='/cart'>
+          <img id='cartIcon' src={Cart} alt='' />
+          ({cart.reduce((sum, item) => sum + item.num, 0)})
+        </Link>
       </div>
     </div>
   )

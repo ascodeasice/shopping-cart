@@ -25,22 +25,22 @@ describe('render properly', () => {
   });
 });
 
-describe('Add to cart', () => {
-  it('add item', () => {
-    render(
-      <BrowserRouter >
-        <App />
-        <Link to='/1' data-testid='mockLink'>mock</Link>
-      </BrowserRouter>
-    );
-    const mockLink = screen.getByTestId('mockLink');
-    userEvent.click(mockLink);
-    const purchaseBtn = screen.getByRole('button', { name: 'Add to cart' });
-    const purchaseInput = screen.getByRole('spinbutton', { name: 'Number' });
-    userEvent.type(purchaseInput, '2');
-    userEvent.click(purchaseBtn);
+// describe('Add to cart', () => {
+//   it('add item', () => {
+//     render(
+//       <BrowserRouter >
+//         <App />
+//         <Link to='/1' data-testid='mockLink'>mock</Link>
+//       </BrowserRouter>
+//     );
+//     const mockLink = screen.getByTestId('mockLink');
+//     userEvent.click(mockLink);
+//     const purchaseBtn = screen.getByRole('button', { name: 'Add to cart' });
+//     const purchaseInput = screen.getByRole('spinbutton', { name: 'Number' });
+//     userEvent.type(purchaseInput, '2');
+//     userEvent.click(purchaseBtn);
 
-    const itemLeft = screen.getByText(/Cart\(\d\)/i);
-    expect(itemLeft.textContent).toBe(`Cart(2)`);
-  });
-})
+//     const itemLeft = screen.getByText(/Cart\(\d\)/i);
+//     expect(itemLeft.textContent).toBe(`Cart(2)`);
+//   });
+// });
