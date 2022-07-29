@@ -7,7 +7,7 @@ const ShopPage = ({ products }) => {
     <div id='shopPage' className='pageContent'>
       <h1 className='heading'>Store</h1>
       <div className='line'></div>
-      <div id="itemContainer">
+      <div className="itemContainer">
         {
           products.map(product => <ItemCard key={product.id} product={product} />)
         }

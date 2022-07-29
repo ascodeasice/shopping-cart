@@ -13,7 +13,7 @@ const NavBar = ({ cart }) => {
         <Link className="navBarLink" to='/store'>Store</Link>
         <Link className="navBarLink" to='/cart'>
           <img id='cartIcon' src={Cart} alt='' />
-          ({cart.reduce((sum, item) => sum + item.num, 0)})
+          Cart({cart.reduce((sum, item) => sum + item.num, 0)})
         </Link>
       </div>
     </div>

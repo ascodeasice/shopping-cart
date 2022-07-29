@@ -25,7 +25,8 @@ const InfoContainer = ({ product, products, setProducts, cart, setCart }) => {
         name: product.name,
         description: product.description,
         num: purchaseNum,
-        price: product.price
+        price: product.price,
+        srcList: product.imgSrc
       }));
     }
 

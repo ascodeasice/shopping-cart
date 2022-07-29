@@ -6,7 +6,7 @@ import ItemPage from './components/ItemPage/ItemPage';
 import ShopPage from './components/ShopPage/ShopPage';
 import NavBar from './components/Navbar';
 import NotFoundPage from './components/NotFoundPage';
-import CartPage from './components/CartPage';
+import CartPage from './components/CartPage/CartPage';
 
 import Shark1 from './assets/shark1.jpg';
 import Shark2 from './assets/shark2.jpg';
@@ -82,7 +82,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/store' element={<ShopPage products={products} />} />
-        <Route path='/cart' element={<CartPage />} />
+        <Route path='/cart' element={<CartPage cart={cart} setCart={setCart} />} />
         <Route path='/*' element={<ItemPage cart={cart} setCart={setCart}
           products={products} setProducts={setProducts} />} />
         <Route path='/*' element={<NotFoundPage />} />

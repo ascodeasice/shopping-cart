@@ -1,0 +1,48 @@
+#totalPrice {
+  white-space: nowrap;
+}
+
+#checkoutContainer {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: min-content;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#noItemText {
+  text-align: center;
+}
+
+#emptyCartContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-auto-rows: min-content;
+}
+
+#githubIcon {
+  width: 8vh;
+  height: 8vh;
+}
+
+#githubLink {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-items: center;
+}
+
+#githubLink:hover {
+  filter: invert(24%) sepia(53%) saturate(2643%) hue-rotate(193deg) brightness(94%) contrast(103%);
+}
+
+.linkText {
+  white-space: nowrap;
+  text-decoration: underline;
+  text-align: center;
+}
+
+#ikeaLink:hover {
+  color: var(--yellow);
+}

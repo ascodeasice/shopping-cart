@@ -48,3 +48,14 @@ a {
   background-color: gray;
   margin: 20px 0 20px 0;
 }
+
+.infoTitle {
+  margin-bottom: 0;
+  font-size: 3vw;
+}
+
+.itemDescription {
+  margin-top: 0;
+  font-size: 2vw;
+  white-space: pre-line;
+}
