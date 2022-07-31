@@ -25,6 +25,10 @@ import Shelf1 from './assets/shelf1.jpg';
 import Shelf2 from './assets/shelf2.jpg';
 import Shelf3 from './assets/shelf3.jpg';
 import Shelf4 from './assets/shelf4.jpg';
+import Bear1 from './assets/bear1.jpg';
+import Bear2 from './assets/bear2.jpg';
+import Bear3 from './assets/bear3.jpg';
+import Bear4 from './assets/bear4.jpg';
 
 const App = () => {
   const [products, setProducts] = useState([
@@ -71,6 +75,18 @@ const App = () => {
       price: 210,
       numLeft: 1,
       imgSrc: [Shelf1, Shelf2, Shelf3, Shelf4]
+    },
+    {
+      id: '4',
+      name: 'DJUNGELSKOG',
+      description: `This big brown bear always greets you with open arms. Cuddly like no other and with a lovely giant stomach where you can feel safe resting - in other words, a real softy.
+
+      All soft toys are good at hugging, comforting and listening and are fond of play and mischief. In addition, they are reliable and tested for safety.
+      
+      Soft and safe friend with big and open arms made for cuddling.`,
+      price: 30,
+      numLeft: 10,
+      imgSrc: [Bear1, Bear2, Bear3, Bear4]
     }
   ]);
   const [cart, setCart] = useState([]);
